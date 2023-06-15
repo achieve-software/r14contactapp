@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import  firebase from "./firebase";
-import { getDatabase, ref, set,push, onValue } from "firebase/database";
 import {useState} from "react";
-export const AddUser=(info)=> {
+import  firebase from "./firebase";
+import { getDatabase, ref, set,push, onValue, remove,update } from "firebase/database";export const AddUser=(info)=> {
   const db = getDatabase(firebase);
   const useRef= ref(db, 'users/');
   const newUserRef= push(useRef);
@@ -28,4 +27,12 @@ export const useFetch = () => {
       setIsLoading(false);
     });
   }, []);
-  return { isLoading, contactList };    }
+  return { isLoading, contactList };    }  
+    export const DeleteUser=(id)=>{
+      const db = getDatabase(firebase);
+      remove(ref(db, 'users/' + id));
+    }   
+     export const UpdateUser =(info)=>{
+      const db = getDatabase(firebase);
+      const updates={}
+      updates["users/"+info.id]=info;      return update(ref(db),updates)  }

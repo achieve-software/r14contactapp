@@ -12,8 +12,7 @@ import {
   Box,
 } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-const FormComponent = ({info,setInfo,handleSubmit}) => {
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';const FormComponent = ({info,setInfo,handleSubmit, isAdd}) => {
  const handleChange = (e) => {
   e.preventDefault();
   // const name = e.target.name;
@@ -22,10 +21,10 @@ const FormComponent = ({info,setInfo,handleSubmit}) => {
   // console.log(name,value);
   setInfo({...info,[name]:value});
  };
-  return (
-          <Grid textAlign="center" direction="column" style={{ width: '300' }} >
+  return (      <Grid
+       textAlign="center" direction="column" style={{ width: '300' }} >
       <p className="contact-header">
-        <div> <a href="https://www.linkedin.com/in/cemispirli/" className="design" target="_blank" rel="noopener noreferrer" > Alex </a> </div>
+        <div> <a href="https://www.linkedin.com/in/cemispirli/" className="design" target="_blank" rel="noopener noreferrer" > Cem </a> </div>
         <span className="design header">design</span>
       </p>
       <h2 className="contact-header">Add Contact</h2>      <Box style={{ backgroundColor: 'white', padding: '20px' }}>
@@ -73,7 +72,7 @@ const FormComponent = ({info,setInfo,handleSubmit}) => {
                 <MenuItem value="Other">Other</MenuItem>              </Select>
             </FormControl>
             <Button variant="contained" type="submit" value="Submit">
-            Add
+            {isAdd}
             </Button>
           </Stack>
         </form>
