@@ -2,7 +2,9 @@ import "./App.css";
 import Contacts from "./components/Contacts";
 import FormComponent from "./components/FormComponent";
 import {useState} from "react";
-import {AddUser,UpdateUser} from "./utils/functions";const initialValues = { username:"", phoneNumber:"", gender:"NO INFO" };function App() {
+import {AddUser,UpdateUser} from "./utils/functions";
+import {ToastContainer} from "react-toastify"
+const initialValues = { username:"", phoneNumber:"", gender:"NO INFO" };function App() {
   const [info , setInfo] = useState(initialValues);
   const [isAdd, setIsAdd] = useState("ADD");  const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ import {AddUser,UpdateUser} from "./utils/functions";const initialValues = { use
     <div className="App">
       <FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit} isAdd={isAdd}/>
       <Contacts editUser={editUser}/>
+      <ToastContainer/>
     </div>
   );
 }export default App;

@@ -24,7 +24,7 @@ import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';const FormCompon
   return (      <Grid
        textAlign="center" direction="column" style={{ width: '300' }} >
       <p className="contact-header">
-        <div> <a href="https://www.linkedin.com/in/cemispirli/" className="design" target="_blank" rel="noopener noreferrer" > Cem </a> </div>
+        <div> <a href="https://www.linkedin.com/in/cemispirli/" className="design" target="_blank" rel="noopener noreferrer" > Alex </a> </div>
         <span className="design header">design</span>
       </p>
       <h2 className="contact-header">Add Contact</h2>      <Box style={{ backgroundColor: 'white', padding: '20px' }}>
