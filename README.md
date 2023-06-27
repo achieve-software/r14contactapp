@@ -1,4 +1,31 @@
-![](https://github.com/cemispirli/firebase-contact-app/blob/master/firabasecontactapp.gif)
+# Contact App
+## Description
+Project aims to create Contact App
+## Project Skeleton
+```
+|----public
+        |----index.html
+|----src        
+        |----components
+                 |----Contacts.js
+                 |----FormComponent.js
+       |----utils 
+                 |----firebase.js
+                 |----functions.js
+                 |----toastify.js
+       |----App.js
+       |----App.scss
+       |----index.css
+       |----index.js
+|----readme.md
+|----firabasecontactapp.gif 
+```
+## Project-gif
+![JavaScript-project](https://raw.githubusercontent.com/achieve-software/achieve-software/main/img/r14contactapp.gif)
+## Project-link
+https://rainbow-praline-a0873b.netlify.app/
+### At the end of the project, following topics are to be covered;
+-React
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
