@@ -14,7 +14,7 @@ import { ToastifyAdd, ToastifyDelete, ToastifyUpdate } from "./toastify";export 
   ToastifyAdd ("Added Successfully")
 }
 export const useFetch = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [contactList, setContactList] = useState();
   useEffect(() => {
     const db = getDatabase(firebase);
